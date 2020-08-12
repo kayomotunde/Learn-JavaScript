@@ -1,3 +1,3 @@
-# Learning Web Development from MDN
+# Learning Web Development - MDN
 
 - second commit, added past files HTML, JavaScript
