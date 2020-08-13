@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonymous Functions</title>
+</head>
+<body>
+  <button id="anon-btn-1">Anon-Button-1</button>
+  <button id="anon-btn-2">Anon-Button-2</button>
+
+  <script>
+    const myButton1 = document.querySelector('#anon-btn-1');
+    const myButton2 = document.querySelector('#anon-btn-2');
+
+    myButton1.onclick = function () {
+      alert('This is the first button, with onclick');
+    }
+
+    myButton2.addEventListener('click', function(){
+      alert('This is the second button with event listener')
+    });
+  </script>
+</body>
+</html>
