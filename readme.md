@@ -1,3 +1,7 @@
-# Learning Web Development - MDN
+# Learn Web Development - MDN
 
-- second commit, added past files HTML, JavaScript
+Learning Web Development from MDN learning area
+
+https://developer.mozilla.org/en-US/docs/Learn
+
+----------------------------------------------
