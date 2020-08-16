@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change color</title>
+
+  <style>
+    #area {
+      padding: 10px;
+      width: 400px;
+      height: 250px;
+    }
+
+    button{
+      margin:5px;
+    }
+  </style>
+</head>
+<body>
+  <button>Change color</button>
+  
+  <div id="area">
+  </div>
+  <script>
+    const btn = document.querySelector('button');
+
+    function random(number) {
+      return Math.floor(Math.random()*number+1);
+    }
+
+    btn.onclick = function (){
+      const randomColor = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+      const part = document.querySelector('#area');
+      part.style.backgroundColor = randomColor;
+    }
+  </script>
+</body>
+</html>

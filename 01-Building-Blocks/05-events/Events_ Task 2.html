@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)http://127.0.0.1:5500/Learn-JavaScript/01-Building-Blocks/05-events/07-events2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Events: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="./Events_ Task 2_files/styles.css">
+  </head>
+
+  <body>
+
+    <section class="preview">
+    </section>
+
+    <canvas width="480" height="320" tabindex="0">
+
+    </canvas>
+
+
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+  <script>
+    let canvas = document.querySelector('canvas');
+    let ctx = canvas.getContext('2d');
+
+    function drawCircle(x, y, size) {
+      ctx.fillStyle = 'white';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.beginPath();
+      ctx.fillStyle = 'black';
+      ctx.arc(x, y, size, 0, 2 * Math.PI);
+      ctx.fill();
+    }
+
+    let x = 50;
+    let y = 50;
+    let minX = 30;
+    let minY = 30;
+    let move = 10;
+    const size = 30;
+
+    drawCircle(x, y, size);
+
+    // Add your code here
+    function keyPressed(e) {
+      let code = e.keyCode;
+      switch (code) {
+        case 87:
+          // w key - up
+          alert(code, min(2, 3))
+          break;
+        
+        case 65:
+          alert("A")
+          break;
+
+        case 83:
+          alert("S")
+          break;
+        
+        case 68:
+          alert("D")
+          break;
+        
+        default:
+          break;
+      }
+    }
+
+    window.addEventListener('keydown', keyPressed);
+
+  </script>
+
+</body></html>
