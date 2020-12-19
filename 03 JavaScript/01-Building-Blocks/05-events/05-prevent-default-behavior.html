@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preventing Default Behavior</title>
+
+  <style>
+    div {
+      margin:5px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <div>
+      <label for="form-fname">First Name: </label>
+      <input type="text" name="firstName" id="form-fname">
+    </div>
+    <div>
+      <label for="form-lname">Last Name: </label>
+      <input type="text" name="lastName" id="form-lname">
+    </div>
+    <div>
+      <input type="submit" id="submit">
+    </div>
+  </form>
+  <p></p>
+  
+  
+  
+  <script>
+    const form = document.querySelector('form');
+    const fname = document.querySelector('#form-fname');
+    const lname = document.querySelector('#form-lname');
+    const para = document.querySelector('p');
+
+    form.onsubmit = function(e) {
+      if (fname.value === '' || lname.value === '') {
+        e.preventDefault();
+        para.textContent = 'You need to fill in both names!';
+      }
+    }
+  </script>
+</body>
+</html>
